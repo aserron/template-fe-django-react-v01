@@ -7,7 +7,6 @@
     "meta.pyrefly",
     "charliermarsh.ruff",
     "batisteo.vscode-django",
-
     // TypeScript 7 (Go Native), React & React Native
     "typescriptteam.native-preview",
     "dbaeumer.vscode-eslint",
@@ -15,12 +14,12 @@
     "bradlc.vscode-tailwindcss",
     "expo.vscode-expo-tools",
     "vitest.explorer",
-
     // Cross-platform & General Tooling
     "editorconfig.editorconfig",
     "mikestead.dotenv",
     "tamasfe.even-better-toml",
-    "usernamehw.errorlens"
+    "usernamehw.errorlens",
+    "k--kato.intellij-idea-keybindings",
+    "ms-vscode.vscode-typescript-next"
   ]
 }
-
