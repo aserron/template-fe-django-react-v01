@@ -12,6 +12,13 @@
       "problemMatcher": ["$tsc"]
     },
     {
+      "label": "Gate: Pre-Commit Verify (TS7 Go + Pyrefly + Ruff)",
+      "type": "shell",
+      "command": "pnpm run verify",
+      "group": "build",
+      "problemMatcher": ["$tsc"]
+    },
+    {
       "label": "TS7 (Go): Typecheck Workspaces",
       "type": "shell",
       "command": "pnpm run typecheck:ts",

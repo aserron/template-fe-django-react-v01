@@ -1,0 +1,24 @@
+#!/bin/sh
+# Cross-platform Pre-Commit Verification Gate
+# Enforces that IDE language diagnostics (TS7 Go, Pyrefly, Ruff) pass with 0 errors before committing.
+
+echo "=========================================================="
+echo " [Pre-Commit Gate] Verifying IDE Diagnostics & Types..."
+echo "=========================================================="
+
+# Run full monorepo verification (TS7 Go tsc + Python pyrefly + ruff)
+pnpm run verify
+STATUS=$?
+
+if [ $STATUS -ne 0 ]; then
+  echo ""
+  echo "❌ [Pre-Commit Gate] Commit aborted!"
+  echo "   Errors were reported by TypeScript (Go), Pyrefly, or Ruff."
+  echo "   Please fix all errors reported above before committing."
+  echo "   (To bypass only in critical emergencies: git commit --no-verify)"
+  echo ""
+  exit 1
+fi
+
+echo "✅ [Pre-Commit Gate] All IDE diagnostics passed. Proceeding with commit."
+exit 0

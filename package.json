@@ -9,6 +9,7 @@
     "pnpm": ">=12.0.0"
   },
   "scripts": {
+    "prepare": "git config core.hooksPath .githooks",
     "dev:web": "pnpm --filter @demo/web dev",
     "dev:backend": "uv run --package demo-backend python apps/backend/manage.py runserver 8000",
     "build:web": "pnpm --filter @demo/web build",
