@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    // Python & Django Backend
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.vscode-python-envs",
+    "meta.pyrefly",
+    "charliermarsh.ruff",
+    "batisteo.vscode-django",
+
+    // TypeScript 7 (Go Native), React & React Native
+    "typescriptteam.native-preview",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "expo.vscode-expo-tools",
+    "vitest.explorer",
+
+    // Cross-platform & General Tooling
+    "editorconfig.editorconfig",
+    "mikestead.dotenv",
+    "tamasfe.even-better-toml",
+    "usernamehw.errorlens"
+  ]
+}
+

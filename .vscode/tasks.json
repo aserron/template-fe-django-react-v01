@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "TS7 (Go): Typecheck",
+      "type": "shell",
+      "command": "pnpm run typecheck",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "Python: Pyrefly Typecheck",
+      "type": "shell",
+      "command": "uv run pyrefly check",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Python: Ruff Check & Format",
+      "type": "shell",
+      "command": "uv run ruff check --fix . && uv run ruff format .",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
+

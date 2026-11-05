@@ -1,0 +1,121 @@
+{
+  // =========================================================================
+  // Cross-Platform File & Git Settings (Windows 11 / Linux / macOS)
+  // =========================================================================
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true,
+    "**/.pyrefly": true,
+    "**/.mypy_cache": true
+  },
+  "search.exclude": {
+    "**/.venv": true,
+    "**/node_modules": true,
+    "**/.pnpm-store": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.expo": true,
+    "**/staticfiles": true
+  },
+
+  // =========================================================================
+  // Python 3.15 & Django 6.1 Backend (Pyrefly + Ruff + Debugpy)
+  // =========================================================================
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+  "python.languageServer": "None",
+  "python.terminal.activateEnvironment": true,
+  "python-envs.defaultEnvManager": "ms-python.python:uv",
+  "python-envs.defaultPackageManager": "ms-python.python:uv",
+  "python.pyrefly.disableLanguageServices": false,
+  "python.pyrefly.typeCheckingMode": "default",
+  "python.pyrefly.diagnosticMode": "workspace",
+  "python.analysis.inlayHints": {
+    "callArgumentNames": "partial",
+    "functionReturnTypes": true,
+    "pytestParameters": true,
+    "variableTypes": true
+  },
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "ruff.enable": true,
+  "ruff.nativeServer": "on",
+  "ruff.lineLength": 100,
+  "ruff.importStrategy": "fromEnvironment",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "files.associations": {
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*.txt": "django-txt",
+    "*.env*": "dotenv"
+  },
+  "emmet.includeLanguages": {
+    "django-html": "html",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  // =========================================================================
+  // TypeScript 7.0+ (Go Native LSP / tsgo) + React 19 & React Native 0.88
+  // =========================================================================
+  "typescript.experimental.useTsgo": true,
+  "js/ts.experimental.useTsgo": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "js/ts.tsdk.path": "node_modules/typescript",
+  "typescript.native-preview.tsdk": "node_modules/typescript",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferGoToSourceDefinition": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.showOnInterfaceMethods": true,
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "prettier.endOfLine": "lf",
+  "eslint.useFlatConfig": true,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
+}
+
