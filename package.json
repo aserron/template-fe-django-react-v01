@@ -9,19 +9,18 @@
     "pnpm": ">=12.0.0"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint ."
-  },
-  "dependencies": {
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1",
-    "react-native": "^0.88.1"
+    "dev:web": "pnpm --filter @demo/web dev",
+    "dev:backend": "uv run --package demo-backend python apps/backend/manage.py runserver 8000",
+    "build:web": "pnpm --filter @demo/web build",
+    "typecheck:ts": "pnpm -r run typecheck",
+    "typecheck:py": "uv run pyrefly check",
+    "typecheck": "pnpm run typecheck:ts && pnpm run typecheck:py",
+    "lint:py": "uv run ruff check .",
+    "format:py": "uv run ruff format .",
+    "test:py": "uv run pytest"
   },
   "devDependencies": {
-    "@types/node": "^24.0.0",
-    "@types/react": "^19.2.0",
-    "@types/react-dom": "^19.2.0",
+    "@types/node": "^24.19.2",
     "typescript": "^7.0.2"
   }
 }
-

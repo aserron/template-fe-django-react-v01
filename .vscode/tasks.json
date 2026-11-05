@@ -2,13 +2,20 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "TS7 (Go): Typecheck",
+      "label": "Monorepo: Typecheck All (TS7 Go + Pyrefly)",
       "type": "shell",
       "command": "pnpm run typecheck",
       "group": {
         "kind": "build",
         "isDefault": true
       },
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "TS7 (Go): Typecheck Workspaces",
+      "type": "shell",
+      "command": "pnpm run typecheck:ts",
+      "group": "build",
       "problemMatcher": ["$tsc"]
     },
     {
@@ -24,7 +31,25 @@
       "command": "uv run ruff check --fix . && uv run ruff format .",
       "group": "build",
       "problemMatcher": []
+    },
+    {
+      "label": "Python: Pytest",
+      "type": "shell",
+      "command": "uv run pytest",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Dev: Django Backend (Port 8000)",
+      "type": "shell",
+      "command": "pnpm run dev:backend",
+      "isBackground": true
+    },
+    {
+      "label": "Dev: React Web (Port 5173)",
+      "type": "shell",
+      "command": "pnpm run dev:web",
+      "isBackground": true
     }
   ]
 }
-

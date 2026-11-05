@@ -2,6 +2,12 @@ version = 1
 revision = 5
 requires-python = ">=3.15"
 
+[manifest]
+members = [
+    "demo-backend",
+    "demo-fe-django-react-workspace",
+]
+
 [[package]]
 name = "annotated-types"
 version = "0.8.0"
@@ -75,24 +81,14 @@ wheels = [
 ]
 
 [[package]]
-name = "demo-fe-django-react"
+name = "demo-backend"
 version = "0.1.0"
-source = { virtual = "." }
+source = { virtual = "apps/backend" }
 dependencies = [
     { name = "django" },
     { name = "django-cors-headers" },
     { name = "django-ninja" },
     { name = "djangorestframework" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "django-stubs", extra = ["compatible-mypy"] },
-    { name = "djangorestframework-stubs" },
-    { name = "pyrefly" },
-    { name = "pytest" },
-    { name = "pytest-django" },
-    { name = "ruff" },
 ]
 
 [package.metadata]
@@ -103,8 +99,27 @@ requires-dist = [
     { name = "djangorestframework", specifier = ">=3.18.3" },
 ]
 
+[[package]]
+name = "demo-fe-django-react-workspace"
+version = "0.1.0"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "demo-backend" },
+    { name = "django-stubs", extra = ["compatible-mypy"] },
+    { name = "djangorestframework-stubs" },
+    { name = "pyrefly" },
+    { name = "pytest" },
+    { name = "pytest-django" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+
 [package.metadata.requires-dev]
 dev = [
+    { name = "demo-backend", virtual = "apps/backend" },
     { name = "django-stubs", extras = ["compatible-mypy"], specifier = ">=6.1.2" },
     { name = "djangorestframework-stubs", specifier = ">=3.18.2" },
     { name = "pyrefly", specifier = ">=1.4.1" },

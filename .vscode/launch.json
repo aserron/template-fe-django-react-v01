@@ -2,10 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Django: Runserver",
+      "name": "Django: Runserver (apps/backend)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/backend/manage.py",
+      "program": "${workspaceFolder}/apps/backend/manage.py",
+      "cwd": "${workspaceFolder}/apps/backend",
       "args": ["runserver", "8000"],
       "django": true,
       "justMyCode": true,
@@ -14,13 +15,13 @@
       }
     },
     {
-      "name": "Python: Pytest",
+      "name": "Python: Pytest (apps/backend)",
       "type": "debugpy",
       "request": "launch",
       "module": "pytest",
+      "cwd": "${workspaceFolder}",
       "args": ["-v"],
       "justMyCode": true
     }
   ]
 }
-
