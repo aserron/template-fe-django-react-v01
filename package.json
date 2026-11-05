@@ -16,8 +16,11 @@
     "typecheck:py": "uv run pyrefly check",
     "typecheck": "pnpm run typecheck:ts && pnpm run typecheck:py",
     "lint:py": "uv run ruff check .",
+    "lint:py:check": "uv run ruff check . && uv run ruff format --check .",
     "format:py": "uv run ruff format .",
-    "test:py": "uv run pytest"
+    "test:py": "uv run pytest",
+    "verify": "pnpm run typecheck:ts && pnpm run typecheck:py && pnpm run lint:py:check",
+    "verify:all": "pnpm run verify && pnpm run test:py"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
